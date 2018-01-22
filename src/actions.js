@@ -3,32 +3,27 @@ export const toggleHashChange = (locationHash) => ({
     locationHash
 })
 
-export const myJobsPageLoaded = (payload) => ({
-    type: 'MY_JOBS_PAGE_LOADED',
-    payload
+export const KEY_PRESS = (payload) => ({
+    type: 'KEY_PRESS',
+    ...payload
 })
 
-export const asinLifecycleFormSubmitted = (payload) => ({
-    type: 'ASIN_LIFECYCLE_FORM_SUBMITTED',
-    payload
+export const MOVE_FOCUS_NEXT = (payload) => ({
+    type: 'MOVE_FOCUS_NEXT',
+    ...payload
 })
 
-export const asinLifecycleShowSpinner = (payload) => ({
-    type: 'ASIN_LIFECYCLE_SHOW_SPINNER',
-    payload
+export const MOVE_FOCUS_PREV = (payload) => ({
+    type: 'MOVE_FOCUS_PREV',
+    ...payload
 })
 
-export const weblabLoaded = (payload) => ({
-    type: 'WEBLAB_LOADED',
-    payload
+export const SAVE_TODO_TEXT = (payload) => ({
+    type: 'SAVE_TODO_TEXT',
+    ...payload
 })
 
-export const marketplacesLoaded = (payload) => ({
-    type: 'MARKETPLACES_LOADED',
-    payload
-})
-
-export const intentsLoaded = (payload) => ({
-    type: 'INTENTS_LOADED',
-    payload
+export const EDIT_TODO_TEXT = (payload) => ({
+    type: 'EDIT_TODO_TEXT',
+    ...payload
 })

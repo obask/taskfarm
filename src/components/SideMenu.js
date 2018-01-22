@@ -19,7 +19,7 @@ const SideMenu = ({locationHash, globalStore}) => (
 )
 
 SideMenu.propTypes = {
-    activeTab: PropTypes.string.isRequired,
+    locationHash: PropTypes.string.isRequired,
     globalStore: PropTypes.object.isRequired,
 }
 

@@ -1,11 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
-import { toggleHashChange } from './actions'
+import {KEY_PRESS, toggleHashChange} from './actions'
 import appStore from './appStore'
-
-ReactDOM.render(<App />, document.getElementById('root'));
-
 
 const defaultController = function () {
     if (window.location.hash === "") {
@@ -25,6 +22,16 @@ window.addEventListener('hashchange', function () {
     console.log("URL:", window.location.hash);
     defaultController();
 });
+
+document.addEventListener('keydown', (event) => {
+
+    if (!event.ctrlKey && !event.altKey && !event.metaKey) {
+        console.log(event.key)
+        appStore.dispatch(KEY_PRESS({key: event.key}))
+    }
+
+}, false);
+
 
 appStore.subscribe(() => {
     console.log(appStore.getState())
